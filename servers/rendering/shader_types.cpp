@@ -175,9 +175,6 @@ ShaderTypes::ShaderTypes() {
 	shader_modes[RS::SHADER_SPATIAL].functions["fragment"].built_ins["ALPHA_ANTIALIASING_EDGE"] = ShaderLanguage::TYPE_FLOAT;
 	shader_modes[RS::SHADER_SPATIAL].functions["fragment"].built_ins["ALPHA_TEXTURE_COORDINATE"] = ShaderLanguage::TYPE_VEC2;
 
-	// custom "light ready" function
-	shader_modes[RS::SHADER_SPATIAL].functions["fragment"].built_ins["CUSTOM_VEC4_01"] = ShaderLanguage::TYPE_VEC4;	
-
 	shader_modes[RS::SHADER_SPATIAL].functions["light"].built_ins["MODEL_MATRIX"] = constt(ShaderLanguage::TYPE_MAT4);
 	shader_modes[RS::SHADER_SPATIAL].functions["light"].built_ins["VIEW_MATRIX"] = constt(ShaderLanguage::TYPE_MAT4);
 	shader_modes[RS::SHADER_SPATIAL].functions["light"].built_ins["INV_VIEW_MATRIX"] = constt(ShaderLanguage::TYPE_MAT4);
@@ -211,7 +208,6 @@ ShaderTypes::ShaderTypes() {
 	shader_modes[RS::SHADER_SPATIAL].functions["lightready"].built_ins["AMBIENT_LIGHT"] = ShaderLanguage::TYPE_VEC3;
 	shader_modes[RS::SHADER_SPATIAL].functions["lightready"].built_ins["DIFFUSE_LIGHT"] = ShaderLanguage::TYPE_VEC3;
 	shader_modes[RS::SHADER_SPATIAL].functions["lightready"].built_ins["SPECULAR_LIGHT"] = ShaderLanguage::TYPE_VEC3;
-	shader_modes[RS::SHADER_SPATIAL].functions["lightready"].built_ins["CUSTOM_VEC4_01"] = ShaderLanguage::TYPE_VEC4;	
 	shader_modes[RS::SHADER_SPATIAL].functions["lightready"].can_discard = true;
 	shader_modes[RS::SHADER_SPATIAL].functions["lightready"].main_function = true;
 

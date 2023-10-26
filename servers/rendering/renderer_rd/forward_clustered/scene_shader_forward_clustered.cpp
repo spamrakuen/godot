@@ -644,7 +644,6 @@ void SceneShaderForwardClustered::init(const String p_defines) {
 
 		// custom "light ready" function
 		actions.renames["AMBIENT_LIGHT"] = "ambient_light";
-		actions.renames["CUSTOM_VEC4_01"] = "custom_vec4_01";
 
 		//for light
 		actions.renames["VIEW"] = "view";

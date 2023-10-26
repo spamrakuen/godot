@@ -743,7 +743,6 @@ void fragment_shader(in SceneData scene_data) {
 	vec3 eye_offset = vec3(0.0, 0.0, 0.0);
 	vec3 view = -normalize(vertex_interp);
 #endif
-	vec4 custom_vec4_01 = vec4(0.0);
 	vec3 albedo = vec3(1.0);
 	vec3 backlight = vec3(0.0);
 	vec4 transmittance_color = vec4(0.0, 0.0, 0.0, 1.0);
