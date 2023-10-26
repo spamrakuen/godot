@@ -19,8 +19,6 @@ This Godot 4.1 MOD has a new "processor function" for spatial shaders called **l
 
 **WARNING:** Only tested on Editor + Windows, builds for Android or other systems should fail compiling these shaders.
 
-**UPDATE:** Added also a CUSTOM_VEC4_01 built-in that can be used in fragment() and lightready()
-
 # Godot Engine
 
 <p align="center">
