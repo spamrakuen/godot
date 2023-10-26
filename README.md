@@ -19,6 +19,8 @@ This Godot 4.1 MOD has a new "processor function" for spatial shaders called **l
 
 **WARNING:** Only tested on Editor + Windows, builds for Android or other systems should fail compiling these shaders.
 
+**UPDATE:** ALPHA builtin is now also available in the lightready() function.
+
 # Godot Engine
 
 <p align="center">
