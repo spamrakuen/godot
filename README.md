@@ -1,5 +1,7 @@
 # 4.1MOD
 
+**UPDATE:** New 4.2MOD branch available!
+
 As explained [here](https://godotshaders.com/shader/notes-on-the-light-function/); "Spatial shaders provide a lot of information about the light sources, but no way to get the final shading value. You may wish to create an effect based upon the final shading of the fragment, not just the individual contribution of each light. The general approach I’ve seen is to do such effects as a post-process, but that limits us to working in screen space."
 
 This Godot 4.1 MOD has a new "processor function" for spatial shaders called **lightready()** with access to **AMBIENT_LIGHT** (new), **DIFFUSE_LIGHT** and **SPECULAR_LIGHT** built-ins. So you can do a godot shader like this:
