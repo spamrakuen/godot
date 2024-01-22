@@ -19,6 +19,8 @@ This Godot 4.2 MOD has a new "processor function" for spatial shaders called **l
 
 **WARNING:** Only tested on Editor + Windows, builds for Android or other systems should fail compiling these shaders.
 
+**GREAT NEWS** Future Godot update (Shader Templates) should make this mod useless! 
+
 # Godot Engine
 
 <p align="center">
