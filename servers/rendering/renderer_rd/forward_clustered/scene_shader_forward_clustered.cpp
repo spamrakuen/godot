@@ -779,6 +779,7 @@ void SceneShaderForwardClustered::init(const String p_defines) {
 		actions.renames["DIFFUSE_VAL"] = "diffuse_light";
 		actions.renames["DIRECT_SPECULAR_VAL"] = "direct_specular_light";
 		actions.renames["INDIRECT_SPECULAR_VAL"] = "indirect_specular_light";
+		actions.renames["ALPHA_VAL"] = "alpha";
 
 		//for light
 		actions.renames["VIEW"] = "view_highp";
