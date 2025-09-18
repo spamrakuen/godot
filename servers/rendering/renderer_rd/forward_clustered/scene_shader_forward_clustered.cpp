@@ -775,7 +775,9 @@ void SceneShaderForwardClustered::init(const String p_defines) {
 		actions.renames["EYE_OFFSET"] = "eye_offset";
 
 		// custom "light ready" function
-		actions.renames["AMBIENT_LIGHT"] = "ambient_light";
+		actions.renames["AMBIENT_VAL"] = "ambient_light";
+		actions.renames["DIFFUSE_VAL"] = "diffuse_light";
+		actions.renames["SPECULAR_VAL"] = "direct_specular_light";
 
 		//for light
 		actions.renames["VIEW"] = "view_highp";

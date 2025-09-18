@@ -2805,7 +2805,7 @@ void fragment_shader(in SceneData scene_data) {
 	ambient_light *= 1.0 - metallic;
 
 	// custom "light ready" function
-	// ambient_light, diffuse_light and specular_light values are ready to use
+	// ambient_val, diffuse_val and specular_val values are ready to use
 	{
 #CODE : LIGHTREADY
 	}		
