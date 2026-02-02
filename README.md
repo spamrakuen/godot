@@ -6,6 +6,7 @@ As explained [here](https://godotshaders.com/shader/notes-on-the-light-function/
 
 This Godot fork has a new "processor function" for spatial shaders called **lightready()** with access to **AMBIENT_VAL**, **DIFFUSE_VAL**, **DIRECT_SPECULAR_VAL**, **INDIRECT_SPECULAR_VAL** and **ALPHA_VAL** built-ins. So you can do a godot shader like this:
 
+```
   shader_type spatial;
 
   void fragment() {
@@ -21,6 +22,7 @@ This Godot fork has a new "processor function" for spatial shaders called **ligh
     DIRECT_SPECULAR_VAL *= vec3(0.0, 0.0, 1.0); 
     INDIRECT_SPECULAR_VAL *= vec3(0.0, 0.0, 1.0); 
   }
+```
 
 **WARNING:** Only tested on Editor + Windows, builds for Android or other systems should fail compiling these shaders.
 
