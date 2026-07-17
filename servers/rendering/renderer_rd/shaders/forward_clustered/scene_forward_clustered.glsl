@@ -3055,6 +3055,12 @@ void fragment_shader(in SceneData scene_data) {
 	diffuse_light *= 1.0 - metallic;
 	ambient_light *= 1.0 - metallic;
 
+	// custom "light ready" function
+	// ambient_val, diffuse_val and specular_val values are ready to use
+	{
+#CODE : LIGHTREADY
+	}			
+
 #ifndef FOG_DISABLED
 	//restore fog
 	fog = vec4(unpackHalf2x16(fog_rg), unpackHalf2x16(fog_ba));

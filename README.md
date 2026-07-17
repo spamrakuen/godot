@@ -1,3 +1,33 @@
+# 4.7.1MOD
+
+**WARNING:** Old versions of this MOD use another built-in names. If you're upgrading, you'll need to update your shaders.
+
+As explained [here](https://godotshaders.com/shader/notes-on-the-light-function/); "Spatial shaders provide a lot of information about the light sources, but no way to get the final shading value. You may wish to create an effect based upon the final shading of the fragment, not just the individual contribution of each light. The general approach I’ve seen is to do such effects as a post-process, but that limits us to working in screen space."
+
+This Godot fork has a new "processor function" for spatial shaders called **lightready()** with access to **AMBIENT_VAL**, **DIFFUSE_VAL**, **DIRECT_SPECULAR_VAL**, **INDIRECT_SPECULAR_VAL** and **ALPHA_VAL** built-ins. So you can do a godot shader like this:
+
+```
+  shader_type spatial;
+
+  void fragment() {
+    METALLIC = 0.6;
+    ROUGHNESS = 0.1;
+    ALPHA = 1.0; /* needed if you want to use ALPHA_VAL in lightready() */
+  }
+
+  void lightready() {
+    ALPHA_VAL = 0.9;
+    AMBIENT_VAL *= vec3(1.0, 0.0, 0.0);
+    DIFFUSE_VAL *= vec3(0.0, 1.0, 0.0);
+    DIRECT_SPECULAR_VAL *= vec3(0.0, 0.0, 1.0); 
+    INDIRECT_SPECULAR_VAL *= vec3(0.0, 0.0, 1.0); 
+  }
+```
+
+**WARNING:** Only tested on Editor + Windows, builds for Android or other systems should fail compiling these shaders.
+
+**WARNING:** Wokot engine splash screen was also removed.
+
 # Godot Engine
 
 <p align="center">

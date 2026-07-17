@@ -96,6 +96,7 @@ void SceneShaderForwardClustered::ShaderData::set_code(const String &p_code) {
 	actions.entry_point_stages["vertex"] = ShaderCompiler::STAGE_VERTEX;
 	actions.entry_point_stages["fragment"] = ShaderCompiler::STAGE_FRAGMENT;
 	actions.entry_point_stages["light"] = ShaderCompiler::STAGE_FRAGMENT;
+	actions.entry_point_stages["lightready"] = ShaderCompiler::STAGE_FRAGMENT; // custom "light ready" function		
 
 	actions.render_mode_values["blend_add"] = Pair<int *, int>(&blend_mode, BLEND_MODE_ADD);
 	actions.render_mode_values["blend_mix"] = Pair<int *, int>(&blend_mode, BLEND_MODE_MIX);
@@ -794,6 +795,13 @@ void SceneShaderForwardClustered::init(const String p_defines) {
 		actions.renames["VIEW_MONO_LEFT"] = "0";
 		actions.renames["VIEW_RIGHT"] = "1";
 		actions.renames["EYE_OFFSET"] = "eye_offset";
+
+		// custom "light ready" function
+		actions.renames["AMBIENT_VAL"] = "ambient_light";
+		actions.renames["DIFFUSE_VAL"] = "diffuse_light";
+		actions.renames["DIRECT_SPECULAR_VAL"] = "direct_specular_light";
+		actions.renames["INDIRECT_SPECULAR_VAL"] = "indirect_specular_light";
+		actions.renames["ALPHA_VAL"] = "alpha";
 
 		//for light
 		actions.renames["VIEW"] = "view_highp";

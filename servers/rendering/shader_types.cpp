@@ -233,6 +233,15 @@ ShaderTypes::ShaderTypes() {
 	shader_modes[RSE::SHADER_SPATIAL].functions["light"].can_discard = true;
 	shader_modes[RSE::SHADER_SPATIAL].functions["light"].main_function = true;
 
+	// custom "light ready" function
+	shader_modes[RSE::SHADER_SPATIAL].functions["lightready"].built_ins["AMBIENT_VAL"] = ShaderLanguage::TYPE_VEC3;
+	shader_modes[RSE::SHADER_SPATIAL].functions["lightready"].built_ins["DIFFUSE_VAL"] = ShaderLanguage::TYPE_VEC3;
+	shader_modes[RSE::SHADER_SPATIAL].functions["lightready"].built_ins["DIRECT_SPECULAR_VAL"] = ShaderLanguage::TYPE_VEC3;
+	shader_modes[RSE::SHADER_SPATIAL].functions["lightready"].built_ins["INDIRECT_SPECULAR_VAL"] = ShaderLanguage::TYPE_VEC3;
+	shader_modes[RSE::SHADER_SPATIAL].functions["lightready"].built_ins["ALPHA_VAL"] = ShaderLanguage::TYPE_FLOAT;
+	shader_modes[RSE::SHADER_SPATIAL].functions["lightready"].can_discard = true;
+	shader_modes[RSE::SHADER_SPATIAL].functions["lightready"].main_function = true;		
+
 	// spatial render modes
 	{
 		shader_modes[RSE::SHADER_SPATIAL].modes.push_back({ PNAME("blend"), "mix", "add", "sub", "mul", "premul_alpha" });
